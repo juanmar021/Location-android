@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                 android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:drawableLeft="@drawable/ic_persona"
+                    android:drawableTint="@color/colorPrimary"
+                    android:id="@+id/edtt_nombres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                     android:hint="Nombres" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edtt_direccion"
+                    android:layout_width="match_parent"
+                    android:hint="Dirección"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+    </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:id="@+id/txtLatLng"
+
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edt_lat_lng"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                     android:drawableLeft="@drawable/ic_location"
+                    android:editable="false"
+
+                    android:drawableTint="@color/colorPrimary"
+                    android:hint="Coordenadas" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_height="33dp">
+
+
+            <Button
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:id="@+id/boton_guardar_info"
+                android:background="@drawable/redondear_boton"
+                android:textColor="@color/colorBackground"
+                 android:text="Guardar"
+                android:layout_width="match_parent"
+                 android:layout_height="match_parent" />
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/boton_borrar_datos"
+                android:textColor="@color/colorBackground"
+                 android:text="Borrar DB"
+                android:background="@drawable/redondear_boton_red"
+                android:layout_marginRight="5dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/boton_generar_json"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/redondear_boton"
+                android:text="Obtener JSON"
+                android:textColor="@color/colorBackground" />
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/linearLayout2"
+        android:orientation="vertical"
+        android:layout_below="@id/linearLayout1"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtNoHayRegistros"
+                    android:layout_width="match_parent"
+                    android:textAlignment="center"
+                    android:visibility="gone"
+                    android:text="No hay registros en la base de datos"
+                    android:layout_height="match_parent" />
+
+
+                <ProgressBar
+                    android:id="@+id/pCargando"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/lista_informacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                     tools:listitem="@layout/my_item_lista" />
+
+
+
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabListarTodos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_location" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</RelativeLayout>
