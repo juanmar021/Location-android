@@ -1,4 +1,5 @@
 # Location Android
+Proyecto hecho en Android Studio IDE en lenguaje JAVA
 Registra o elimina estudiantes en base de datos local SQLite con sus coordenadas geograficas y luego lista todos o un estudiante en particular en el mapa usando la Api Google Maps
 ### Guardar información
 
