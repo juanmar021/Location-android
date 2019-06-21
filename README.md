@@ -12,4 +12,6 @@ Se usa para listar los estudiantes guardados en la base de datos así como tambi
 Recuerde crear su propio ApiKey en la pagina de Google SDK maps y reemplazarla en el archivo google_maps_api.xml de la carpeta res/values 
 
 ## Capturas
-![alt text](https://github.com/juanmar021/Location-android/blob/master/CAPTURAS/ej1.jpeg)
+![Ejemplo 1](https://github.com/juanmar021/Location-android/blob/master/CAPTURAS/ej1.jpeg)
+![Ejemplo 2](https://github.com/juanmar021/Location-android/blob/master/CAPTURAS/ej2.jpeg)
+![Ejemplo 3](https://github.com/juanmar021/Location-android/blob/master/CAPTURAS/ej3.jpeg)
